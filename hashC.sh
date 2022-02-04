@@ -7,14 +7,19 @@ read IA
 # IA means installation answer
 
 if [ "$IA" != "${IA#[Yy]}" ]; then
-           echo "moving on..."
-           sleep 0.50
-           echo "enter attack mode"
-else
+           
            echo "installing hashcat..."
            sudo apt-get update && sudo apt-get install hashcat
            exit
-fi
+           
+else
+           
+           echo "moving on..."
+           sleep 0.50
+           echo "enter attack mode"
+
+fi           
+
 
 read AMODE
 
