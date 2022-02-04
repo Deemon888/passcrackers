@@ -2,7 +2,7 @@
 
 # dont hack anyone password without premission... thx
 
-echo "you need hashcat for this script. do you have it? (y or n)"
+echo "you need hashcat for this script. do you want to install it? (y or n)"
 read IA
 # IA means installation answer
 
@@ -23,7 +23,7 @@ fi
 
 read AMODE
 
-if [ "$AMODE" != "${AMODE#[0, 1, 3, 6, 7]}" ]; then
+if [ "$AMODE" != "${AMODE#["0, 1, 3, 6, 7"]}" ]; then
 # note: this is only a basic hashcat attack. not the hybrid stuff.
               echo "enter hash type"
 else
