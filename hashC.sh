@@ -6,7 +6,7 @@ echo "you need hashcat for this script. do you have it? (y or n)"
 read IA
 # IA means installation answer
 
-if [ "$IA" != "${IA#[Yy]}"]; then
+if [ "$IA" != "${IA#[Yy]}" ]; then
            echo "moving on..."
            sleep 0.50
            echo "enter attack mode"
