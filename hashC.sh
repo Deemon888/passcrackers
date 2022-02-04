@@ -23,7 +23,7 @@ fi
 
 read AMODE
 
-if [ "$AMODE" != "${AMODE[0, 1, 3, 6, 7]}" ]; then
+if [ "$AMODE" != "${AMODE#[0, 1, 3, 6, 7]}" ]; then
 # note: this is only a basic hashcat attack. not the hybrid stuff.
               echo "enter hash type"
 else
@@ -31,7 +31,7 @@ else
               sleep 1
               echo "do you want to run hashcat -h (Y or n)"
               read A
-              if [ "$A" != "${A[Yy]}"]; then
+              if [ "$A" != "${A#[Yy]}"]; then
               hashcat -h
               exit
       else
