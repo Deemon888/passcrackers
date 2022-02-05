@@ -42,13 +42,13 @@ fi
 
 read HTYPE
 
-echo "enter hash file or just raw hash (NOTE: dont use ~ for home directory use /home/'username')"
+echo -ne "enter hash file or just raw hash \n(NOTE: dont use ~ for home directory use /home/'username')"
 read HFILE
 
 echo "enter password list"
 read PASLIST
 
-echo "this is your command: hashcat -a $AMODE -m $HTYPE $HFILE $PASLIST . do you wish to run it (Y or n)"
+echo -ne "this is your command: hashcat -a $AMODE -m $HTYPE $HFILE $PASLIST .\ndo you wish to run it (Y or n)"
 read A2
 
 if [ "$A2" != "${A2#[Yy]}" ]; then
