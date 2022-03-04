@@ -72,4 +72,4 @@ else
            hashcat -a $AMODE -m $HTYPE $HFILE $PASLIST
 fi
 
-# finished in 33 mins with 68 lines
+# finished in 33 mins with 73 lines
